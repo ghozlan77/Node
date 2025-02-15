@@ -1,6 +1,6 @@
-exports.getUser(req,res)=>{
+exports.getUser=(req,res)=>{
     res.send("hello");
 };
-exports.createUser(req,res)=>{
+exports.createUser=(req,res)=>{
     res.send("creat user");
 };
