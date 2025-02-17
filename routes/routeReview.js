@@ -1,6 +1,7 @@
-const express =require("express");
-const router =express.Router();
-const reviewController=require('../controllers/reviewController');
+const express = require('express');
+const reviewController = require('../controllers/reviewController');
+
+const router = express.Router();
 
 // befor controller
 //  router.get("/",(req,res)=>{
@@ -16,11 +17,8 @@ const reviewController=require('../controllers/reviewController');
 //     res.send("no review");
 //  });
 
+// befor controller
+router.get('/', reviewController.getReview);
+router.post('/', reviewController.createReview);
 
- // befor controller
-router.get("/",reviewController.getReview);
-router.post("/",reviewController.createReview);
-
-
-
-module.exports=router;
+module.exports = router;
